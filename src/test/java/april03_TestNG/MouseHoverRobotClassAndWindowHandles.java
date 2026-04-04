@@ -1,0 +1,96 @@
+package april03_TestNG;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.*;
+
+@Listeners(Listener.class)
+public class MouseHoverRobotClassAndWindowHandles {
+	WebDriver driver;
+	
+	@BeforeClass
+	public void setup() 
+	{
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("--incognito --start-Maximized");
+		driver = new ChromeDriver(co);
+		driver.get("https://www.facebook.com");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	
+	
+	
+	@Test(priority=1)
+	public void rightClickMouseHoverAction() 
+	{
+		WebElement insta = driver.findElement(By.linkText("Instagram"));
+		Actions action = new Actions(driver);
+		action.moveToElement(insta).contextClick().build().perform();
+	}
+	
+	
+	@Test(priority=2)
+	public void robotClass() throws AWTException, InterruptedException 
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+	}
+	
+	
+	@Test(priority=3)
+	public void windowHandles() 
+	{
+		Set<String> wd = driver.getWindowHandles();
+		Iterator<String> it = wd.iterator();
+		String parent = it.next();
+		String child = it.next();
+		
+		driver.switchTo().window(parent);
+		System.out.println(driver.getTitle());
+		
+		driver.switchTo().window(child);
+		System.out.println(driver.getTitle());
+	}
+	
+	
+	
+	
+	
+	@AfterClass
+	public void tearDown() throws InterruptedException 
+	{
+		driver.quit();
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
