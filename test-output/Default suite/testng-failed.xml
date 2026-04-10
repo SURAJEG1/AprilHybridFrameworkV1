@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="april04_TestNG.RediffmailTestCase">
+      <class name="april09_TestNG.Tc001_StaticDropdown">
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="iframeHandlesRobotAndWindowHandles"/>
+          <include name="staticDropdown_SelectByIndex"/>
         </methods>
-      </class> <!-- april04_TestNG.RediffmailTestCase -->
+      </class> <!-- april09_TestNG.Tc001_StaticDropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
