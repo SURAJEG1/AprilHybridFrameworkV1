@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-11T00:47:43 IST" name="Default suite" finished-at="2026-04-11T00:47:57 IST" duration-ms="13994">
+  <suite started-at="2026-04-14T14:05:46 IST" name="Default suite" finished-at="2026-04-14T14:06:08 IST" duration-ms="22759">
     <groups>
     </groups>
-    <test started-at="2026-04-11T00:47:43 IST" name="Default test" finished-at="2026-04-11T00:47:57 IST" duration-ms="13994">
-      <class name="april07_TestNG.CountAndPrintHyperLinks">
-        <test-method is-config="true" signature="setup()[pri:0, instance:april07_TestNG.CountAndPrintHyperLinks@1fa121e2]" started-at="2026-04-11T00:47:43 IST" name="setup" finished-at="2026-04-11T00:47:50 IST" duration-ms="6846" status="PASS">
+    <test started-at="2026-04-14T14:05:46 IST" name="Default test" finished-at="2026-04-14T14:06:08 IST" duration-ms="22759">
+      <class name="april14_TestNG.ItameHandles">
+        <test-method is-config="true" signature="setup()[pri:0, instance:april14_TestNG.ItameHandles@5bda8e08]" started-at="2026-04-14T14:05:46 IST" name="setup" finished-at="2026-04-14T14:05:56 IST" duration-ms="10752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="printAndCountHyperLinksOfAmazon()[pri:0, instance:april07_TestNG.CountAndPrintHyperLinks@1fa121e2]" started-at="2026-04-11T00:47:50 IST" name="printAndCountHyperLinksOfAmazon" finished-at="2026-04-11T00:47:57 IST" duration-ms="7029" status="PASS">
+        <test-method signature="iframe()[pri:0, instance:april14_TestNG.ItameHandles@5bda8e08]" started-at="2026-04-14T14:05:56 IST" name="iframe" finished-at="2026-04-14T14:06:08 IST" duration-ms="11302" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printAndCountHyperLinksOfAmazon -->
-      </class> <!-- april07_TestNG.CountAndPrintHyperLinks -->
+        </test-method> <!-- iframe -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:april14_TestNG.ItameHandles@5bda8e08]" started-at="2026-04-14T14:06:08 IST" name="tearDown" finished-at="2026-04-14T14:06:08 IST" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- april14_TestNG.ItameHandles -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
